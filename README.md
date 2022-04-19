@@ -1,7 +1,4 @@
-
-# Sass-Project
-Sass Sample Project
-
+**Sass Sample Project**
 
 In this project I tried to teach sass and give examples for better understanding
 
