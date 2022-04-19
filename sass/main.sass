@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+
+//____________________________________****** nesting ********______________________________________// 
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    //__________**__________//
+    &:hover {
+        background-color: #45a049;
+    }
+}
+
+
+//another sample for nesting
+.card {
+    color: black;
+    border: 1px solid gray;
+    padding: 20px 50px;
+    margin: 20px;
+
+    h1 {
+        font-size: 30px;
+        color: green;
+    }
+}
+
+
+//____________________________________****** mixin ********______________________________________//
+@mixin warning-text {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: aliceblue;
+    padding: 20px 35px;
+    margin: 20px;
+
+}
+
+.warning-section p {
+    padding: 20px;
+    @include warning-text;
+}
+
+//another sample for mixin
+@mixin header-style($fontSize :20px, $color: black) {
+    font-size: $fontSize;
+    color: $color;
+    font-weight: bold;
+    background-color: aliceblue;
+    padding: 20px 35px;
+    margin: 20px;
+} 
+.nav-header {
+    @include header-style(30px, rgb(27, 0, 126));
+}
+
+
+
+//____________________________________****** mixin ********______________________________________//
